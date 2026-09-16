@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mapping Pigeon Feeding Hotspots in Brussels — Yanrui Jiang</title>
+<meta name="description" content="B-POHOW research project, University of Namur: building a field-verified spatial database of pigeon feeding hotspots in the Brussels-Capital Region — bicycle-based fieldwork, feeding typology, GIS mapping and anonymised policy reporting.">
+<meta name="author" content="Yanrui Jiang">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='12' fill='%2317242f'/><text x='32' y='44' font-size='34' font-family='Georgia,serif' fill='%232260E8' text-anchor='middle'>J</text></svg>">
+<link rel="stylesheet" href="../assets/site.css">
+<link rel="stylesheet" href="../assets/mobile-fix.css">
+</head>
+<!--
+  ============================================================================
+  内容依据：yanrui_Jiang_Internship_report_B-POHOW.pdf（城市研究硕士实习报告，2026）
+  报告中未出现任何 AI 工具使用声明，故本页不写 AI 工作流。若要保留请见
+  projects/项目图文_待回填清单.md 第 1 条。
+  ============================================================================
+-->
+<body data-title-en="Mapping Pigeon Feeding Hotspots in Brussels — Yanrui Jiang" data-title-zh="布鲁塞尔岩鸽投喂热点制图 — 江衍睿">
+
+<div class="top">
+  <div class="wrap">
+    <a class="brand" href="../index.html" style="text-decoration:none">Yanrui <em>Jiang</em></a>
+    <nav class="tabs" role="tablist">
+      <a class="tab" href="../site.html#cv"><span data-en="Who am I?" data-zh="我是谁？">Who am I?</span></a>
+      <a class="tab tab-on" href="../site.html#research"><span data-en="Urban Studies" data-zh="城市研究">Urban Studies</span></a>
+      <a class="tab" href="../site.html#photography"><span data-en="Urban Wandering" data-zh="城市漫游">Urban Wandering</span></a>
+    </nav>
+    <div class="langsw">
+      <button data-lang-btn="en" type="button">EN</button>
+      <button data-lang-btn="zh" type="button">中</button>
+    </div>
+  </div>
+</div>
+
+<header class="p-hero">
+  <div class="wrap">
+    <a class="backlink" href="../index.html" data-en="← Back to profile" data-zh="← 返回个人主页">← Back to profile</a>
+    <p class="p-kicker" data-en="Urban Studies internship · B-POHOW research project · Brussels · 2026" data-zh="城市研究实习 · B-POHOW 研究项目 · 布鲁塞尔 · 2026">Urban Studies internship · B-POHOW research project · Brussels · 2026</p>
+    <h1 data-en="Mapping Pigeon Feeding Hotspots in Brussels" data-zh="布鲁塞尔岩鸽投喂热点制图">Mapping Pigeon Feeding Hotspots in Brussels</h1>
+    <p class="role-sub" style="font-size:16px;margin:-4px 0 18px" data-en="Fieldwork, spatial analysis and urban human–animal relations" data-zh="外勤踏勘、空间分析与城市人兽关系">Fieldwork, spatial analysis and urban human–animal relations</p>
+    <div class="chips">
+      <span class="chip"><span class="dot"></span><span data-en="Research intern · Université de Namur (B-POHOW)" data-zh="研究实习生 · 那慕尔大学（B-POHOW）">Research intern · Université de Namur (B-POHOW)</span></span>
+      <span class="chip"><span class="dot"></span><span data-en="Mar – Jun 2026" data-zh="2026.03 – 2026.06">Mar – Jun 2026</span></span>
+      <span class="chip"><span class="dot"></span><span data-en="Supervisor: Dr. Ciska De Ruyver" data-zh="导师：Ciska De Ruyver 博士">Supervisor: Dr. Ciska De Ruyver</span></span>
+      <span class="chip"><span class="dot"></span><span data-en="One Health · One Welfare" data-zh="同一健康 · 同一福利">One Health · One Welfare</span></span>
+    </div>
+    <div class="facts">
+      <div class="fact"><b>175+</b><span data-en="candidate locations screened" data-zh="处候选点位逐一核查">candidate locations screened</span></div>
+      <div class="fact"><b>115</b><span data-en="active feeding hotspots verified" data-zh="处活跃投喂热点获确认">active feeding hotspots verified</span></div>
+      <div class="fact"><b>1,503</b><span data-en="site photographs and videos (17 GB)" data-zh="份现场照片与影像（17 GB）">site photographs and videos (17 GB)</span></div>
+      <div class="fact"><b>7</b><span data-en="feeding-type categories coded" data-zh="类投喂类型编码">feeding-type categories coded</span></div>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap prose">
+
+    <h2 data-en="The framing: One Health and One Welfare" data-zh="研究框架：同一健康与同一福利">The framing: One Health and One Welfare</h2>
+    <p data-en="The B-POHOW project at the University of Namur studies pigeon feeding hotspots in the Brussels-Capital Region through the combined lenses of One Health and One Welfare. Rather than treating pigeons only as a nuisance or a public-health concern, the project examines how human practices, animal welfare, public-space management and urban environmental conditions interrelate." data-zh="那慕尔大学的 B-POHOW 项目以「同一健康」与「同一福利」双重视角，研究布鲁塞尔首都大区的岩鸽投喂热点。项目不把鸽子仅仅视为滋扰或公共卫生问题，而是考察人类实践、动物福利、公共空间管理与城市环境条件之间的相互关系。">The B-POHOW project at the University of Namur studies pigeon feeding hotspots in the Brussels-Capital Region through the combined lenses of One Health and One Welfare. Rather than treating pigeons only as a nuisance or a public-health concern, the project examines how human practices, animal welfare, public-space management and urban environmental conditions interrelate.</p>
+    <p data-en="Feeding hotspots are not randomly distributed. They are shaped by public-space design, hard or soft surfaces, food waste, informal care practices, municipal management strategies and residents' daily routines. In that sense pigeons function as indicators of broader urban conditions." data-zh="投喂热点并非随机分布。它们由公共空间设计、硬质或软质地面、食物浪费、非正式照料实践、市政管理策略与居民日常动线共同塑造。在这个意义上，鸽子是更广泛城市状况的指示物。">Feeding hotspots are not randomly distributed. They are shaped by public-space design, hard or soft surfaces, food waste, informal care practices, municipal management strategies and residents' daily routines. In that sense pigeons function as indicators of broader urban conditions.</p>
+
+    <h2 data-en="My role: turning municipal leads into a verifiable database" data-zh="我的角色：把市政线索变成可核验的数据库" style="margin-top:34px">My role: turning municipal leads into a verifiable database</h2>
+    <p data-en="My task in the first phase of the project was to establish a reliable, field-verified spatial database of feeding hotspots to support the later stages — veterinary observation, sociological analysis and discussion with public authorities. The starting point was a preliminary list of suspected sites reported by municipal authorities, field partners and the research team's prior knowledge. Those inputs were uneven: some entries were precise and recent, others vague, outdated, duplicated, or based mainly on residents' complaints rather than direct observation." data-zh="我在项目第一阶段的任务，是建立一份可靠、经实地核验的投喂热点空间数据库，以支撑后续的兽医观察、社会学分析与政府沟通。起点是由市政部门、现场合作方与研究团队既有认知提供的疑似点位清单；这些线索质量参差——有的精确且近期，有的含糊、过时、重复，或主要基于居民投诉而非直接观察。">My task in the first phase of the project was to establish a reliable, field-verified spatial database of feeding hotspots to support the later stages — veterinary observation, sociological analysis and discussion with public authorities. The starting point was a preliminary list of suspected sites reported by municipal authorities, field partners and the research team's prior knowledge. Those inputs were uneven: some entries were precise and recent, others vague, outdated, duplicated, or based mainly on residents' complaints rather than direct observation.</p>
+
+    <h2 data-en="Step 1 — systematic fieldwork, mainly by bicycle" data-zh="第一步：系统外勤踏勘，以自行车为主要方式" style="margin-top:34px">Step 1 — systematic fieldwork, mainly by bicycle</h2>
+    <ul class="bul">
+      <li data-en="Carried out extensive fieldwork across the Brussels-Capital Region, mainly by bicycle — a mode that gave access to dense public spaces and allowed flexible movement between municipalities at a human scale." data-zh="在布鲁塞尔首都大区内开展大范围外勤踏勘，以自行车为主要交通方式——便于进入密集公共空间，并在各市镇之间灵活穿行、以人的尺度观察城市环境。">Carried out extensive fieldwork across the Brussels-Capital Region, mainly by bicycle — a mode that gave access to dense public spaces and allowed flexible movement between municipalities at a human scale.</li>
+      <li data-en="Applied a standardised observation protocol at every candidate site, recording pigeon presence, whether feeding was observed, approximate flock size, feeding type, spatial typology, surface materials, perching or nesting opportunities, fieldwork time and counting method." data-zh="在每个候选点位执行标准化观察流程，记录：是否有鸽、是否观察到投喂、鸽群规模、投喂类型、空间类型、地面材质、栖息与营巢条件、踏勘时间与计数方法。">Applied a standardised observation protocol at every candidate site, recording pigeon presence, whether feeding was observed, approximate flock size, feeding type, spatial typology, surface materials, perching or nesting opportunities, fieldwork time and counting method.</li>
+      <li data-en="Collected <strong>17 GB of visual material — 1,503 photographs and videos</strong> — documenting the sites first-hand." data-zh="采集 <strong>17 GB 视觉资料、共 1,503 份照片与影像</strong>，一手记录现场状况。">Collected <strong>17 GB of visual material — 1,503 photographs and videos</strong> — documenting the sites first-hand.</li>
+      <li data-en="Coded fieldwork status in three categories: <strong>1</strong> site visited but no pigeons found, <strong>2</strong> pigeons found but no feeding observed, <strong>3</strong> pigeons found and feeding observed." data-zh="踏勘状态分三类编码：<strong>1</strong> 到访但未见鸽；<strong>2</strong> 见鸽但未观察到投喂；<strong>3</strong> 见鸽且观察到投喂。">Coded fieldwork status in three categories: <strong>1</strong> site visited but no pigeons found, <strong>2</strong> pigeons found but no feeding observed, <strong>3</strong> pigeons found and feeding observed.</li>
+      <li data-en="From <strong>more than 175 candidate locations</strong>, <strong>115 sites</strong> were classified as active feeding hotspots (code 3). The gap between reported and verified sites is itself a finding: administrative knowledge of animal presence differs from direct ecological observation." data-zh="在 <strong>175 处以上候选点位</strong>中，<strong>115 处</strong>被确认为活跃投喂热点（编码 3）。被报告的点位与实际核实的点位之间的落差本身就是一个发现：行政管理所掌握的动物分布信息，与直接的生态观察结果并不一致。">From <strong>more than 175 candidate locations</strong>, <strong>115 sites</strong> were classified as active feeding hotspots (code 3). The gap between reported and verified sites is itself a finding: administrative knowledge of animal presence differs from direct ecological observation.</li>
+    </ul>
+
+    <h2 data-en="Step 2 — cleaning and coding a hybrid phenomenon" data-zh="第二步：数据清洗与类型学编码" style="margin-top:34px">Step 2 — cleaning and coding a hybrid phenomenon</h2>
+    <ul class="bul">
+      <li data-en="Cleaned and standardised a dataset assembled from multiple sources in two languages (French and Dutch) with different naming conventions, typologies and levels of precision." data-zh="清洗并标准化一份来自多方来源的数据集——涉及法语与荷兰语两种语言，命名习惯、类型学与精度各不相同。">Cleaned and standardised a dataset assembled from multiple sources in two languages (French and Dutch) with different naming conventions, typologies and levels of precision.</li>
+      <li data-en="Classified feeding into <strong>seven categories</strong>: intentional feeding, authorised management feeding, mixed intentional and unintentional feeding, contraceptive grain combined with other sources, commercial-food proximity foraging, mixed self-foraging, and anthropogenic waste foraging." data-zh="把投喂划分为 <strong>七个类别</strong>：主动投喂、获授权的管理型投喂、主动与被动投喂混合、避孕谷物与其他来源并存、商业食物邻近觅食、混合自主觅食、人造废弃物觅食。">Classified feeding into <strong>seven categories</strong>: intentional feeding, authorised management feeding, mixed intentional and unintentional feeding, contraceptive grain combined with other sources, commercial-food proximity foraging, mixed self-foraging, and anthropogenic waste foraging.</li>
+      <li data-en="Many sites did not fit a single category — some combined contraceptive feeding with bread provided by residents, others combined commercial food waste with direct intentional feeding. Coding therefore required repeated discussion with my supervisor, and data cleaning became an interpretive process rather than a purely technical one." data-zh="许多点位无法归入单一类别——有的同时存在避孕投喂与居民投喂的面包，有的把商业食物浪费与主动投喂叠加。因此编码需要与导师反复讨论，数据清洗也就成为一个解释性过程，而非纯技术性工作。">Many sites did not fit a single category — some combined contraceptive feeding with bread provided by residents, others combined commercial food waste with direct intentional feeding. Coding therefore required repeated discussion with my supervisor, and data cleaning became an interpretive process rather than a purely technical one.</li>
+    </ul>
+    <div class="figrow">
+      <figure class="shot">
+        <img src="../assets/projects/pigeon/04-feeding-types.webp" alt="Feeding type distribution">
+        <figcaption data-en="Fig. 1 — Feeding-type distribution across the field-verified active hotspots (codes a–g). Source: internship report." data-zh="图 1 — 已核实活跃热点的投喂类型占比（编码 a–g）。来源：实习报告。">Fig. 1 — Feeding-type distribution across the field-verified active hotspots (codes a–g). Source: internship report.</figcaption>
+      </figure>
+      <figure class="shot">
+        <img src="../assets/projects/pigeon/05-spatial-typology.webp" alt="Spatial typology distribution">
+        <figcaption data-en="Fig. 2 — Spatial typology of feeding hotspots: public open, green-blue recreational, micro-edge opportunistic and mobility-infrastructure spaces. Source: internship report." data-zh="图 2 — 投喂热点的空间类型：公共开放型、绿蓝休憩型、微观边缘机会型与移动基础设施型。来源：实习报告。">Fig. 2 — Spatial typology of feeding hotspots: public open, green-blue recreational, micro-edge opportunistic and mobility-infrastructure spaces. Source: internship report.</figcaption>
+      </figure>
+    </div>
+    <figure class="shot">
+      <img src="../assets/projects/pigeon/06-surface-types.webp" alt="Surface type distribution">
+      <figcaption data-en="Fig. 3 — Surface types recorded at active hotspots: mineral and mixed mineral–dolomite surfaces dominate, linking feeding sites to built and paved environments rather than green space alone. Source: internship report." data-zh="图 3 — 活跃热点的地表材质构成：矿物与矿物–白云石混合地面占主导，说明投喂点位与建成铺装环境的关系比与绿地更紧密。来源：实习报告。">Fig. 3 — Surface types recorded at active hotspots: mineral and mixed mineral–dolomite surfaces dominate, linking feeding sites to built and paved environments rather than green space alone. Source: internship report.</figcaption>
+    </figure>
+
+    <h2 data-en="Step 3 — GIS mapping and spatial analysis" data-zh="第三步：GIS 制图与空间分析" style="margin-top:34px">Step 3 — GIS mapping and spatial analysis</h2>
+    <ul class="bul">
+      <li data-en="Produced a <strong>hotspot distribution map</strong> showing the regional spread of verified active feeding hotspots." data-zh="绘制<strong>热点分布图</strong>，呈现已核实活跃热点在大区范围内的分布。">Produced a <strong>hotspot distribution map</strong> showing the regional spread of verified active feeding hotspots.</li>
+      <li data-en="Built a <strong>kernel-density estimate</strong>; the strongest concentrations appear in dense, central and inner-ring urban areas, where street networks, commercial activity, transport nodes, squares and mixed-use public space converge." data-zh="制作<strong>核密度估计图</strong>；最强聚集出现在密集的中心城区与内环一带，那里街网、商业活动、交通节点、广场与混合功能公共空间高度交叠。">Built a <strong>kernel-density estimate</strong>; the strongest concentrations appear in dense, central and inner-ring urban areas, where street networks, commercial activity, transport nodes, squares and mixed-use public space converge.</li>
+      <li data-en="Mapped <strong>flock size</strong> as proportional circles, from small groups up to flocks exceeding 100 individuals." data-zh="以比例圆圈绘制<strong>鸽群规模</strong>分布，从个位数小群到超过 100 只的大群并存。">Mapped <strong>flock size</strong> as proportional circles, from small groups up to flocks exceeding 100 individuals.</li>
+      <li data-en="Produced <strong>exploratory socio-economic overlays</strong> — flock size against neighbourhood population density (2025) and against median equivalent household income after tax (2022)." data-zh="制作<strong>探索性社会经济叠加图</strong>——把鸽群规模与社区人口密度（2025）、税后家庭等值收入中位数（2022）叠加比对。">Produced <strong>exploratory socio-economic overlays</strong> — flock size against neighbourhood population density (2025) and against median equivalent household income after tax (2022).</li>
+    </ul>
+    <figure class="shot">
+      <img src="../assets/projects/pigeon/01-kernel-density.webp" alt="Kernel density estimate of feeding hotspots">
+      <figcaption data-en="Fig. 4 — Kernel density estimate of field-verified feeding hotspots, Brussels-Capital Region. Municipal boundaries shown for reference only; exact locations are not disclosed. Source: internship report." data-zh="图 4 — 已核实投喂热点的核密度估计，布鲁塞尔首都大区。市镇边界仅作空间参照；具体点位不予公开。来源：实习报告。">Fig. 4 — Kernel density estimate of field-verified feeding hotspots, Brussels-Capital Region. Municipal boundaries shown for reference only; exact locations are not disclosed. Source: internship report.</figcaption>
+    </figure>
+    <div class="figrow">
+      <figure class="shot">
+        <img src="../assets/projects/pigeon/02-flock-population.webp" alt="Flock size overlaid with population density">
+        <figcaption data-en="Fig. 5 — Observed flock size at feeding hotspots overlaid with neighbourhood population density (2025)." data-zh="图 5 — 投喂热点观察到的鸽群规模，叠加社区人口密度（2025）。">Fig. 5 — Observed flock size at feeding hotspots overlaid with neighbourhood population density (2025).</figcaption>
+      </figure>
+      <figure class="shot">
+        <img src="../assets/projects/pigeon/03-flock-income.webp" alt="Flock size overlaid with median household income">
+        <figcaption data-en="Fig. 6 — Flock size overlaid with median equivalent household income after tax by neighbourhood (2022)." data-zh="图 6 — 鸽群规模叠加社区税后家庭等值收入中位数（2022）。">Fig. 6 — Flock size overlaid with median equivalent household income after tax by neighbourhood (2022).</figcaption>
+      </figure>
+    </div>
+
+    <h2 data-en="What the data showed" data-zh="数据说明了什么" style="margin-top:34px">What the data showed</h2>
+    <ul class="bul">
+      <li data-en="Unauthorised intentional feeding was the largest single category: <strong>52 sites, roughly 45.2%</strong> of the 115 active hotspots — informal human feeding remains a major component of pigeon urban ecology." data-zh="未经许可的主动投喂是最大的单一类别：<strong>52 处，约占 115 处活跃热点的 45.2%</strong>——非正式的人类投喂仍是岩鸽城市生态的主要构成。">Unauthorised intentional feeding was the largest single category: <strong>52 sites, roughly 45.2%</strong> of the 115 active hotspots — informal human feeding remains a major component of pigeon urban ecology.</li>
+      <li data-en="Food-waste-related foraging near restaurants, food shops, markets and chip shops accounted for <strong>23 sites (20.0%)</strong>; counting mixed categories it rises to <strong>29 sites (about 25.2%)</strong>." data-zh="餐馆、食品店、市场与薯条店周边的食物浪费型觅食占 <strong>23 处（20.0%）</strong>；计入混合类别后升至 <strong>29 处（约 25.2%）</strong>。">Food-waste-related foraging near restaurants, food shops, markets and chip shops accounted for <strong>23 sites (20.0%)</strong>; counting mixed categories it rises to <strong>29 sites (about 25.2%)</strong>.</li>
+      <li data-en="Contraceptive feeding was identified at <strong>25 active hotspots (21.7%)</strong> — 21 coded as type d and 4 as d+e — and in most cases appeared alongside other food sources rather than as an isolated intervention." data-zh="避孕谷物投喂见于 <strong>25 处活跃热点（21.7%）</strong>——其中 21 处编码为 d 类、4 处为 d+e——且多数情况下与其他食物来源并存，而非独立措施。">Contraceptive feeding was identified at <strong>25 active hotspots (21.7%)</strong> — 21 coded as type d and 4 as d+e — and in most cases appeared alongside other food sources rather than as an isolated intervention.</li>
+      <li data-en="Hotspots sat overwhelmingly in urbanised public space — squares and plazas, spaces adjacent to transport, the surroundings of religious buildings, parks, street gardens and building entrances — and a significant share were on hard or mixed surfaces such as textured paving, dolomite, or paving combined with bare soil and grass." data-zh="热点绝大多数位于城市化公共空间——广场、交通空间周边、宗教建筑周边、公园、街头绿地与建筑入口——且相当比例落在硬质或混合地面，如纹理铺装、白云石，或铺装与裸土、草地相间。" >Hotspots sat overwhelmingly in urbanised public space — squares and plazas, spaces adjacent to transport, the surroundings of religious buildings, parks, street gardens and building entrances — and a significant share were on hard or mixed surfaces such as textured paving, dolomite, or paving combined with bare soil and grass.</li>
+      <li data-en="Taken together, the distribution is shaped less by autonomous foraging than by a combination of human practices, urban infrastructure and mixed feeding ecologies." data-zh="总体而言，这一分布与其说由鸽子自主觅食决定，不如说是人类实践、城市基础设施与混合投喂生态共同作用的结果。">Taken together, the distribution is shaped less by autonomous foraging than by a combination of human practices, urban infrastructure and mixed feeding ecologies.</li>
+    </ul>
+
+    <h2 data-en="Stakeholder engagement and reporting" data-zh="利益相关方沟通与成果输出" style="margin-top:34px">Stakeholder engagement and reporting</h2>
+    <ul class="bul">
+      <li data-en="Took part in <strong>two stakeholder meetings</strong> bringing together representatives of several Brussels municipalities and other actors involved in pigeon management — on <strong>10 March and 19 May 2026</strong>." data-zh="参与<strong>两场利益相关方会议</strong>，与会者包括多个布鲁塞尔市镇的代表及其他鸽子管理相关方——分别在 <strong>2026 年 3 月 10 日与 5 月 19 日</strong>。">Took part in <strong>two stakeholder meetings</strong> bringing together representatives of several Brussels municipalities and other actors involved in pigeon management — on <strong>10 March and 19 May 2026</strong>.</li>
+      <li data-en="Contributed to drafting an academic <strong>Fact Sheet for the journal <em>Brussels Studies</em></strong>, turning field data into a concise, anonymised, policy-relevant format: selecting key findings, simplifying typologies without losing analytical nuance, presenting quantitative results accurately, and linking empirical results to urban-governance debates." data-zh="参与撰写面向 <strong><em>Brussels Studies</em> 期刊的学术 Fact Sheet</strong>，把外勤数据转化为简洁、脱敏、对政策有用的形式：筛选关键发现、在不损失分析层次的前提下简化类型学、准确呈现量化结果，并把实证结果与城市治理议题相连。">Contributed to drafting an academic <strong>Fact Sheet for the journal <em>Brussels Studies</em></strong>, turning field data into a concise, anonymised, policy-relevant format: selecting key findings, simplifying typologies without losing analytical nuance, presenting quantitative results accurately, and linking empirical results to urban-governance debates.</li>
+      <li data-en="The meetings made the political dimension explicit: municipalities approach pigeons through complaints, hygiene, building maintenance and public-space management, while the research had to hold on to animal welfare, feeding practices and ecological relationships." data-zh="这两场会议让治理的政治维度变得具体：市镇多从投诉、卫生、建筑维护与公共空间管理出发，而研究则需同时守住动物福利、投喂实践与生态关系这些维度。">The meetings made the political dimension explicit: municipalities approach pigeons through complaints, hygiene, building maintenance and public-space management, while the research had to hold on to animal welfare, feeding practices and ecological relationships.</li>
+    </ul>
+
+    <h2 data-en="Research ethics: why the maps are anonymised" data-zh="研究伦理：地图为什么必须脱敏" style="margin-top:34px">Research ethics: why the maps are anonymised</h2>
+    <ul class="bul">
+      <li data-en="Anonymisation was treated as an ethical principle rather than an administrative step. Identifiable addresses and street-level information were withheld so the maps could not be used to target feeders, disturb animals, or intensify conflict between residents, feeders, animal-protection groups and public authorities." data-zh="脱敏被视为一项研究伦理原则，而非行政步骤。隐去可识别地址与街道级信息，以免地图被用于针对投喂者、惊扰动物，或激化居民、投喂者、动物保护团体与主管部门之间的冲突。" >Anonymisation was treated as an ethical principle rather than an administrative step. Identifiable addresses and street-level information were withheld so the maps could not be used to target feeders, disturb animals, or intensify conflict between residents, feeders, animal-protection groups and public authorities.</li>
+      <li data-en="Mapping is never only a technical act: making feeding practices visible can also expose vulnerable actors — informal feeders, homeless people, the animals themselves — to surveillance or public criticism. The project therefore had to balance scientific transparency with ethical caution." data-zh="制图从来不只是技术行为：让投喂实践变得可见，也可能把非正式投喂者、无家可归者乃至动物本身暴露于监视或公众指责之下。项目因此需要在科学透明度与伦理审慎之间取得平衡。">Mapping is never only a technical act: making feeding practices visible can also expose vulnerable actors — informal feeders, homeless people, the animals themselves — to surveillance or public criticism. The project therefore had to balance scientific transparency with ethical caution.</li>
+      <li data-en="Consistently, the maps presented here are a <strong>research-based spatial sample</strong> of field-verified hotspots — not a census of pigeons or hotspots in the region — and the socio-economic overlays are exploratory rather than evidence of causal relationships." data-zh="相应地，本页呈现的地图是经实地核验热点的<strong>空间研究样本</strong>——不是大区鸽群或热点的普查——社会经济叠加图属探索性呈现，并不构成因果关系的证据。">Consistently, the maps presented here are a <strong>research-based spatial sample</strong> of field-verified hotspots — not a census of pigeons or hotspots in the region — and the socio-economic overlays are exploratory rather than evidence of causal relationships.</li>
+    </ul>
+
+    <p class="footnote" data-en="Source: urban studies internship report, <em>Mapping Pigeon Feeding Hotspots in Brussels: Fieldwork, Spatial Analysis, and Urban Human–Animal Relations</em> (B-POHOW research project, Université de Namur, March–June 2026). All photographs and maps in the report were produced by the author. Student number 0625257." data-zh="来源：城市研究硕士实习报告《Mapping Pigeon Feeding Hotspots in Brussels: Fieldwork, Spatial Analysis, and Urban Human–Animal Relations》（B-POHOW 研究项目，那慕尔大学，2026 年 3–6 月）。报告内所有照片与地图均由本人拍摄与绘制。学号 0625257。">Source: urban studies internship report, <em>Mapping Pigeon Feeding Hotspots in Brussels: Fieldwork, Spatial Analysis, and Urban Human–Animal Relations</em> (B-POHOW research project, Université de Namur, March–June 2026). All photographs and maps in the report were produced by the author. Student number 0625257.</p>
+
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>© <span id="yr">2026</span> Yanrui Jiang 江衍睿</span>
+    <span>
+      <a href="mailto:ianchiang@gmail.com" data-en="ianchiang@gmail.com" data-zh="2801400978@qq.com" data-en-href="mailto:ianchiang@gmail.com" data-zh-href="mailto:2801400978@qq.com">ianchiang@gmail.com</a>
+      <span style="padding:0 8px;color:var(--line)">·</span>
+      <a href="../site.html#research" data-en="Back to profile" data-zh="返回个人主页">Back to profile</a>
+    </span>
+  </div>
+</footer>
+
+<script src="../assets/site.js"></script>
+</body>
+</html>

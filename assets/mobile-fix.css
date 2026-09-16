@@ -1,0 +1,31 @@
+/* ==========================================================================
+   移动端补丁 —— mobile-fix.css
+   在 site.css 之后加载，只覆盖窄屏表现；桌面版不受影响。
+   解决三个问题：
+     1) 封面背景在竖版手机被居中裁切，画面主体（人物）被切掉
+     2) 顶部 tab 文字逐字换行，排成竖排
+     3) 窄屏下语言切换按钮被挤出可视区
+   ========================================================================== */
+
+/* ---- 1. tab 文字一律不换行（全宽度生效） ---- */
+.tab{white-space:nowrap}
+
+/* ---- 2. 顶部栏窄屏改成两行：上行＝站名＋语言切换，下行＝三个 tab ---- */
+@media (max-width:760px){
+  .top .wrap{height:auto;flex-wrap:wrap;gap:4px 10px;padding:9px 0}
+  .brand{order:1}
+  .langsw{order:2;margin-left:auto}
+  nav.tabs{order:3;flex:1 0 100%;margin:0;justify-content:space-between;gap:0;
+           border-top:1px solid var(--line-soft);padding-top:4px}
+  .tab{padding:9px 6px;font-size:13.5px}
+  .tab[aria-selected="true"]::after,
+  .tab.tab-on::after{left:6px;right:6px;bottom:1px}
+}
+
+/* ---- 3. 封面：窄屏换用竖版裁切图，人物回到取景框内 ---- */
+@media (max-width:760px){
+  .cover{background-image:url(cover/cover-portrait.jpg);background-position:center center}
+  .cover-inner{padding:0 22px 6vh}
+  .cover-block{max-width:100%}
+  .cover-nav{gap:10px}
+}
